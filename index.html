@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelo Holmes - QA Engineer Portfolio</title>
+    <title>From Chaos to Control: Leveraging Notion for a Seamless QA Job Hunt Workflow</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Rock Salt for name, Kameron for headings, Sansation for body -->
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Kameron:wght@400;700&family=Sansation:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Custom styles from your main site */
         body {
             font-family: 'Sansation', sans-serif; /* Sansation for general body text */
             background-color: #1a1a1a; /* Slightly darker base for moodier feel */
@@ -21,7 +23,7 @@
         h2, h3 { /* Kameron for H2 and H3 headings */
             font-family: 'Kameron', serif;
         }
-        /* Custom styles for back-to-top button and message box */
+        /* Custom styles for back-to-top button and message box (included for completeness, though not actively used in this blog structure) */
         #back-to-top {
             position: fixed;
             bottom: 2rem;
@@ -58,7 +60,7 @@
             transform: translateY(0);
         }
 
-        /* Custom decorative divider SVG styling */
+        /* Custom decorative divider SVG styling (included for completeness) */
         .section-divider {
             width: 100%;
             height: 50px; /* Adjust height as needed */
@@ -67,7 +69,7 @@
             fill: #333333; /* Darker fill to blend with background */
         }
 
-        /* Testimonial specific styles */
+        /* Testimonial specific styles (included for completeness) */
         .testimonial-content {
             overflow: hidden;
             transition: max-height 0.5s ease-out;
@@ -89,504 +91,160 @@
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="antialiased">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <!-- Blog Post Title -->
+        <header class="mb-8 fade-in-section">
+            <h1 class="text-4xl lg:text-5xl font-bold text-center mb-4 text-green-400">From Chaos to Control: Leveraging Notion for a Seamless QA Job Hunt Workflow</h1>
+            <p class="text-center text-gray-400 text-lg">Published on <time datetime="2025-08-22">August 22, 2025</time> by Angelo Holmes</p>
+        </header>
 
-    <!-- Header Section -->
-    <header class="bg-gradient-to-br from-neutral-900 to-neutral-800 text-neutral-50 py-12 shadow-2xl rounded-3xl mx-6 mt-6 mb-10 border border-neutral-700 relative overflow-hidden">
-        <!-- Subtle geometric pattern in background -->
-        <div class="absolute inset-0 z-0 opacity-10" style="background-image: radial-gradient(#4a4a4a 1px, transparent 1px); background-size: 20px 20px;"></div>
-        <div class="container mx-auto px-8 text-center relative z-10">
-            <h1 class="text-6xl sm:text-7xl md:text-8xl font-extrabold mb-4 text-white tracking-tight whitespace-nowrap">Angelo Holmes</h1>
-            <p class="text-lg sm:text-xl md:text-2xl font-light text-neutral-300 mb-6 whitespace-nowrap">Quality Assurance Engineer | Automation Enthusiast</p>
-            <div class="mt-8 flex justify-center space-x-10">
-                <a href="https://github.com/Alo-Holmes/Alo-Holmes" target="_blank" rel="noopener noreferrer" class="text-neutral-300 hover:text-teal-400 transition duration-300 ease-in-out text-2xl font-medium flex items-center space-x-2">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.828.092-.643.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.701.115 2.503.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.638.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.21.576.684.483C21.137 20.19 24 16.436 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/angelo-holmes" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out text-2xl font-medium flex items-center space-x-2">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.362-.027-3.119-1.9-3.119-1.902 0-2.197 1.485-2.197 3.02v5.668H9.277V9.323h3.418v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.072 0-1.146.92-2.072 2.063-2.072 1.145 0 2.063.926 2.063 2.072 0 1.146-.92 2.072-2.063 2.072zm1.789 13.019H3.548V9.323h3.578v11.129zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454c.979 0 1.771-.773 1.771-1.729V1.729C24 .774 23.208 0 22.225 0z"/></svg>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://wa.me/27647704082" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:text-green-600 transition duration-300 ease-in-out text-2xl font-medium flex items-center space-x-2">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.34 4.96L2.05 22l5.03-1.31c1.47.8 3.12 1.22 4.96 1.22 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm3.87 13.91c-.11.19-.36.46-.57.54-.19.08-.43.12-.66.03-.23-.08-1.32-.49-1.53-.57-.2-.08-.34-.08-.49.08-.15.15-.57.57-.7.68-.14.11-.28.12-.52.03-.23-.08-.98-.36-1.87-1.15-.69-.6-.98-1.29-1.09-1.48-.11-.19-.01-.3-.01-.43.01-.11.08-.19.19-.28.09-.08.19-.15.28-.23.08-.08.15-.19.23-.34.08-.15.03-.28-.05-.43-.08-.15-.66-1.6-.91-2.14-.23-.52-.46-.43-.64-.43-.19 0-.43-.08-.66-.08-.23 0-.62.08-.94.43-.3.34-1.15 1.12-1.15 2.74 0 1.62 1.18 3.17 1.34 3.41.15.23 2.32 3.53 5.64 4.83 3.32 1.3 3.32.88 3.93.84.61-.04 1.1-.49 1.26-.98.15-.49.15-.9-.08-1.29z"/></svg>
-                    <span>WhatsApp</span>
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Navigation Bar -->
-<nav class="bg-neutral-800 text-neutral-200 py-5 shadow-md sticky top-0 z-50 rounded-3xl mx-4 border border-neutral-700">
-    <div class="container mx-auto px-6 flex justify-center space-x-8 md:space-x-12">
-        <a href="#about" class="hover:text-amber-300 transition duration-300 ease-in-out text-lg font-medium">About Me</a>
-        <a href="#experience" class="hover:text-amber-300 transition duration-300 ease-in-out text-lg font-medium">Experience</a>
-        <a href="#testimonials" class="hover:text-amber-300 transition duration-300 ease-in-out text-lg font-medium">Testimonials</a>
-        <a href="#key-projects" class="hover:text-amber-300 transition duration-300 ease-in-out text-lg font-medium">Key Projects</a>
-        <a href="#demos" class="hover:text-amber-300 transition duration-300 ease-in-out text-lg font-medium">My Demos</a>
-        <a href="#contact" class="hover:text-amber-300 transition duration-300 ease-in-out text-lg font-medium">Contact</a>
-        <a href="blog/index.html" class="hover:text-amber-300 transition duration-300 ease-in-out text-lg font-medium">Blog</a>
-
-    </div>
-</nav>
-
-
-    <!-- Main Content Area -->
-    <main class="flex-grow container mx-auto px-4 py-12">
-        <div class="max-w-5xl mx-auto bg-neutral-900 p-12 rounded-2xl shadow-2xl border border-neutral-700">
-
-            <!-- Introduction Section -->
-            <section id="about" class="mb-20 pt-4 fade-in-section">
-                <h2 class="text-5xl md:text-6xl font-bold text-amber-300 mb-8 border-b-2 border-neutral-600 pb-4">About Me</h2>
-                <p class="text-lg leading-relaxed mb-6 text-neutral-300">
-                    Hey there! I'm Angelo Holmes, and I've been immersed in the world of Quality Assurance since 2012. Over the past 12+ years, I've had the privilege of working across diverse sectors like online gaming, PropTech, and enterprise SaaS. My journey in QA has been about more than just finding bugs; it's about building robust systems from the ground up and ensuring that the software we deliver genuinely enhances user experience.
+        <!-- Blog Post Content -->
+        <main class="space-y-6">
+            <section class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-4 text-green-300">Introduction: Taming the Job Hunt Beast</h2>
+                <p class="text-lg leading-relaxed mb-4">
+                    The QA job hunt can be a sprawling, time-consuming endeavor. Manually searching, sifting through duplicates,
+                    and then tediously adding each promising lead to a tracker often feels like a full-time job in itself.
+                    I've been there – overwhelmed by the sheer volume and the repetitive tasks. This is how I transformed
+                    my chaotic job search into a controlled, efficient, and almost automated workflow using **Notion**
+                    as my central command, combined with **custom prompts** and **CSV imports**.
                 </p>
-                <p class="text-lg leading-relaxed mb-6 text-neutral-300">
-                    I'm passionate about automation and have a knack for diving deep into both UI and API functionalities to craft comprehensive testing strategies. For me, it's about the satisfaction of knowing something works reliably and efficiently. I've always been keen on understanding the bigger picture—from database architecture to network intricacies—because I believe a holistic view is key to true quality. I'm also a big believer in the power of Agile methodologies and have spent years leading cross-functional teams, fostering collaboration, and driving projects to successful, on-time delivery.
+                <p class="text-lg leading-relaxed">
+                    This method dramatically reduces manual intervention, freeing up valuable time to focus on what truly matters:
+                    applying for the best-fit roles.
                 </p>
-                <p class="text-lg leading-relaxed text-neutral-300">
-                    Beyond the technical aspects, I genuinely enjoy mentoring and helping teams grow. My contributions often stretch beyond typical QA roles, touching on analytics, project management, and ensuring smooth project delivery. I'm always learning, always adapting, and always looking for new challenges where I can bring my blend of technical expertise, leadership, and a collaborative spirit to the table. If you're looking for someone who's committed to quality and eager to contribute meaningfully, let's connect!
-                </p>
+            </section>
 
-                <h3 class="text-3xl font-semibold text-neutral-50 mb-5 mt-12 border-b-2 border-neutral-600 pb-3">Key Skills & Tools</h3>
-                <ul class="list-disc list-inside text-lg leading-relaxed mb-4 pl-6 grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-10 text-neutral-300">
-                    <li><span class="font-extrabold text-teal-400">Testing & QA:</span> Manual & Automation Testing, STLC, SDLC, Test Case Design, Defect Management, Non-Functional Testing, Test Planning and Control, Test Analysis</li>
-                    <li><span class="font-extrabold text-teal-400">Automation & Scripting:</span> Cypress.io, Playwright, SpecFlow (BDD), Selenium WebDriver, AIQ (Selenium + JavaScript), Appium</li>
-                    <li><span class="font-extrabold text-teal-400">API & Backend Testing:</span> Postman, Swagger, Microsoft SQL Server, Azure SQL, MongoDB, Insomnia</li>
-                    <li><span class="font-extrabold text-teal-400">DevOps & CI/CD:</span> Azure DevOps, Pipeline Configuration, Git, App Insights</li>
-                    <li><span class="font-extrabold text-teal-400">Languages & Frameworks:</span> JavaScript, TypeScript, C#, HTML5, React, Angular</li>
-                    <li><span class="font-extrabold text-teal-400">Tools:</span> Jira, Adaptavist Test Manager, Visual Studio, TFS, Google Analytics, Google Data Studios, Kibana</li>
-                    <li><span class="font-extrabold text-teal-400">Methodologies:</span> Agile, Scrum, Agile Project Management</li>
-                    <li><span class="font-extrabold text-teal-400">Leadership & Management:</span> Leadership and Management, Coaching and Mentoring, Interpersonal Communication</li>
+            <section class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-4 text-green-300">Phase 1: The Foundation – My Notion Job Tracker Database</h2>
+                <h3 class="text-2xl font-semibold mb-3 text-gray-300">Building the Brain of My Job Hunt</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    At the heart of my system is a robust **Notion database** specifically designed for job tracking.
+                    It goes beyond a simple list, incorporating crucial properties to keep me organized:
+                </p>
+                <ul class="list-disc list-inside text-lg leading-relaxed space-y-2 pl-4">
+                    <li>**Company:** The name of the organization.</li>
+                    <li>**Role:** The job title.</li>
+                    <li>**Link:** Direct URL to the job posting.</li>
+                    <li>**Status:** A critical multi-select property (e.g., "Application Pending," "Applied," "Interviewing," "Rejected," "Offer").</li>
+                    <li>**Rank:** A numerical property to prioritize opportunities.</li>
+                    <li>**Source:** Where I found the job (e.g., LinkedIn, Indeed, Referrals).</li>
+                    <li>**Date Added:** Automatic date creation.</li>
+                    <li>**Notes:** Any specific details or requirements for the role.</li>
                 </ul>
-            </section>
-
-            <!-- Section Divider SVG -->
-            <svg class="section-divider" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0,5 C25,0 75,10 100,5 L100,10 L0,10 Z" />
-            </svg>
-
-            <!-- Experience Section -->
-            <section id="experience" class="mb-20 pt-4 fade-in-section">
-                <h2 class="text-5xl md:text-6xl font-bold text-amber-300 mb-8 border-b-2 border-neutral-600 pb-4">Experience</h2>
-
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl">
-                    <h3 class="text-2xl font-semibold text-neutral-50">QA Engineer | Fraxion (Spend Management Software)</h3>
-                    <p class="text-lg text-neutral-300 mt-2">April 2024 - February 2025 | Cape Town, South Africa</p>
-                    <ul class="list-disc list-inside text-md leading-relaxed mt-5 pl-4 text-neutral-300">
-                        <li>Led API integration testing, ensuring seamless service communication within Spend Management platform.</li>
-                        <li>Developed and executed test cases validating request/response structures, authentication, and data integrity.</li>
-                        <li>Collaborated closely with developers and product teams to identify and resolve API-related issues.</li>
-                        <li>Performed critical manual testing to ensure optimal user experience.</li>
-                        <li>Improved test coverage and efficiency by refining QA documentation and processes.</li>
-                    </ul>
-                </div>
-
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl">
-                    <h3 class="text-2xl font-semibold text-neutral-50">QA Engineer III | MRI Software (AI & Machine Learning Division)</h3>
-                    <p class="text-lg text-neutral-300 mt-2">December 2021 - October 2023 | Cape Town, South Africa</p>
-                    <ul class="list-disc list-inside text-md leading-relaxed mt-5 pl-4 text-neutral-300">
-                        <li>Sole QA responsible for AI-driven Forms Recogniser application; established QA processes for a new team.</li>
-                        <li>Performed backend and integration tests via SQL, Azure, and Postman; tested deployment pipelines across multiple environments.</li>
-                        <li>Built automated scripts using AIQ (Selenium + JavaScript) managed through Git repositories.</li>
-                        <li>Supported DevOps tasks including infrastructure validation and CI/CD pipeline testing.</li>
-                        <li>Coordinated with globally distributed teams, reporting into US-based AI & Machine Learning leadership.</li>
-                    </ul>
-                </div>
-
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl">
-                    <h3 class="text-2xl font-semibold text-neutral-50">QA Analyst (Specialist) | DOS (Online Gaming)</h3>
-                    <p class="text-lg text-neutral-300 mt-2">November 2018 - July 2019 | Cape Town, South Africa</p>
-                    <ul class="list-disc list-inside text-md leading-relaxed mt-5 pl-4 text-neutral-300">
-                        <li>Designed QA-centric dashboards (GA Data Studios) to align testing with real-world usage patterns.</li>
-                        <li>Directed Test Analysts and Automation Engineers to meet quality goals.</li>
-                        <li>Managed Agile projects leveraging Selenium, Appium, and ATATA.</li>
-                    </ul>
-                </div>
-
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl">
-                    <h3 class="text-2xl font-semibold text-neutral-50">Software QA Manager & QA Team Lead | DigiOutsource</h3>
-                    <p class="text-lg text-neutral-300 mt-2">August 2012 - July 2019 | Cape Town, South Africa</p>
-                    <ul class="list-disc list-inside text-md leading-relaxed mt-5 pl-4 text-neutral-300">
-                        <li>Oversaw QA for 30+ frontend websites, managing a team of 20 QA testers.</li>
-                        <li>Introduced standardized STLC processes adopted company-wide, increasing testing reliability and efficiency.</li>
-                        <li>Mentored multiple team members into senior and leadership roles.</li>
-                        <li>Achieved 100% on-time delivery of business-critical projects with zero financial losses.</li>
-                    </ul>
-                </div>
-
-                <p class="text-lg leading-relaxed mt-10 text-neutral-300 text-center">
-                    For a more detailed breakdown of my professional experience, please refer to my full CV.
+                <p class="text-lg leading-relaxed">
+                    This structured approach in Notion provides a clear overview and prevents anything from falling through the cracks.
                 </p>
-                <!-- CV Download Link -->
-                <div class="flex justify-center">
-                    <a href="docs/QA Engineer CV 2025.pdf" target="_blank" rel="noopener noreferrer" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-6">
-                        Download My CV
-                    </a>
-                </div>
             </section>
 
-            <!-- Section Divider SVG -->
-            <svg class="section-divider" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0,5 C25,0 75,10 100,5 L100,10 L0,10 Z" />
-            </svg>
-
-            <!-- Testimonials Section -->
-            <section id="testimonials" class="mb-20 pt-4 fade-in-section">
-                <h2 class="text-5xl md:text-6xl font-bold text-amber-300 mb-8 border-b-2 border-neutral-600 pb-4">Testimonials</h2>
-
-                <div class="relative w-full max-w-3xl mx-auto">
-                    <!-- Testimonial Cards Container -->
-                    <div id="testimonial-carousel" class="relative overflow-hidden rounded-xl shadow-lg border border-neutral-700">
-                        <!-- Individual Testimonial Cards -->
-                        <div class="testimonial-card p-10 bg-neutral-800 rounded-xl transition duration-300 ease-in-out">
-                            <p class="text-xl italic leading-relaxed mb-5 text-neutral-200 testimonial-content collapsed">
-                                “I’ve worked with Angelo for just under 2 years and I can say with confidence that he is one of the better leaders in QA I have worked with. He has the knowledge and experience to be able to easily slot into a functional or technical tester position, in both a doer and a leadership position. As a developer I have always been comfortable working with him on projects as it helps for an smoother SDLC process.”
-                            </p>
-                            <button class="read-more-btn text-teal-400 hover:text-teal-500 font-semibold mt-3 text-sm">Read More</button>
-                            <p class="text-lg font-semibold text-teal-400 mt-4">- Kurt Muller, Software Development Team Lead</p>
-                        </div>
-
-                        <div class="testimonial-card p-10 bg-neutral-800 rounded-xl transition duration-300 ease-in-out">
-                            <p class="text-xl italic leading-relaxed mb-5 text-neutral-200 testimonial-content collapsed">
-                                “I have worked very closely with Angelo during the 2 years that he has served as both my Team Lead and Manager at DOS. Angelo has excelled in all instances, exhibiting one of the highest levels of productivity I have seen in my tenure as customer service host and functional tester. Angelo was constantly on the go and never skipped a beat even during the busiest of times when we were under immense pressure as a team. He always had the situation under control. Angelo possesses the ultimate "can do" attitude while taking on all tasks with a positive energy and smile. His upbeat personality and engaging person style enable him to interact effectively with all the staff who all harbored great respect for him. He is very well organised keeps track of the details necessary to co-ordinate multiple events at the same time. Proactive in anticipating the rising needs of a fast paced environment, he takes the initiative to go beyond the expected parameters of his job. I volunteered to write this recommendation for Angelo because I am very grateful for his contribution to me personally and our company and very confident that he has the intelligence, work ethic and communication skills to add great value wherever he works. Please feel free to contact me if you have any questions about this outstanding gentleman"
-                            </p>
-                            <button class="read-more-btn text-teal-400 hover:text-teal-500 font-semibold mt-3 text-sm">Read More</button>
-                            <p class="text-lg font-semibold text-teal-400 mt-4">- Mariné Hattingh, QA Technical Tester</p>
-                        </div>
-
-                        <div class="testimonial-card p-10 bg-neutral-800 rounded-xl transition duration-300 ease-in-out">
-                            <p class="text-xl italic leading-relaxed mb-5 text-neutral-200 testimonial-content collapsed">
-                                “I have had the pleasure of working with Angelo Holmes for the last 7 years, during which time he has occupied operational and leadership roles in a Quality Assurance capacity. He strives for continuous improvement and is a keen advocate of Automation. Angelo values a methodical approach to Quality Assurance that allows him to lend structure and stability to the software development process without compromising on the agility demanded be the modern enterprise”
-                            </p>
-                            <button class="read-more-btn text-teal-400 hover:text-teal-500 font-semibold mt-3 text-sm">Read More</button>
-                            <p class="text-lg font-semibold text-teal-400 mt-4">- David Mukaiwa, Associated Application Architect</p>
-                        </div>
-
-                        <div class="testimonial-card p-10 bg-neutral-800 rounded-xl transition duration-300 ease-in-out">
-                            <p class="text-xl italic leading-relaxed mb-5 text-neutral-200 testimonial-content collapsed">
-                                “I would like to recommend Angelo Holmes as a candidate for a position with your organization. In his position as Quality Assurance Team Lead, Quality Assurance Manager and Quality Assurance Analyst he demonstrated critical skills that would make him an excellent employee at your company. Angelo did a terrific job in his position and was an asset to our organization during his tenure with the office. He has excellent written and verbal communication skills, is extremely organized, can work independently or as part of a team, and is able to effectively multi-task to ensure that all projects are completed in a timely manner. Angelo is very detail orientated with an eye for process and the continuous improvement thereof. This attention to detail together with his analytical ability moulded the importance of Quality Assurance Analyst role, which he then went on to fulfil. He would be an asset to any employer, and I wholeheartedly recommend Angelo for any endeavour he chooses to pursue. Please let me know if you have any questions about this outstanding gentleman"
-                            </p>
-                            <button class="read-more-btn text-teal-400 hover:text-teal-500 font-semibold mt-3 text-sm">Read More</button>
-                            <p class="text-lg font-semibold text-teal-400 mt-4">- Jody September, Software Development Team Lead</p>
-                        </div>
-
-                        <div class="testimonial-card p-10 bg-neutral-800 rounded-xl transition duration-300 ease-in-out">
-                            <p class="text-xl italic leading-relaxed mb-5 text-neutral-200 testimonial-content collapsed">
-                                “Angelo Holmes has been a great Team Lead and mentor to me. One year after joining the Quality Assurance department as a Functional Tester, I was assigned to Angelo's team. He helped me to develop my database and API skill sets towards becoming a Technical Tester, and helped to grow my understanding of the software development life cycle. He is fair in his expectations and leads by example. His clear communication and strong work ethic have a positive effect within the team. He is always striving for innovation, and it was no surprise when I heard that he was promoted to QA Manager"
-                            </p>
-                            <button class="read-more-btn text-teal-400 hover:text-teal-500 font-semibold mt-3 text-sm">Read More</button>
-                            <p class="text-lg font-semibold text-teal-400 mt-4">- Timothy Groustra, Digital Onsite Marketer</p>
-                        </div>
-                    </div>
-
-                    <!-- Carousel Navigation Buttons -->
-                    <div class="flex justify-center mt-8 space-x-6">
-                        <button id="prev-testimonial" class="bg-teal-600 hover:bg-teal-700 text-white p-3 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-110">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-                        <button id="next-testimonial" class="bg-teal-600 hover:bg-teal-700 text-white p-3 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-110">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section Divider SVG -->
-            <svg class="section-divider" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0,5 C25,0 75,10 100,5 L100,10 L0,10 Z" />
-            </svg>
-
-            <!-- Key Projects Section -->
-            <section id="key-projects" class="mb-20 pt-4 fade-in-section">
-                <h2 class="text-5xl md:text-6xl font-bold text-amber-300 mb-8 border-b-2 border-neutral-600 pb-4">Key Projects</h2>
-                <p class="text-lg leading-relaxed mb-10 text-neutral-300">
-                    Here are some of the key projects and initiatives from my professional experience, showcasing my approach to solving complex QA challenges and delivering impactful results.
+            <section class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-4 text-green-300">Phase 2: Smart Sourcing – Custom Prompts for Targeted Job Discovery</h2>
+                <h3 class="text-2xl font-semibold mb-3 text-gray-300">Letting AI Do the Initial Heavy Lifting</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    Instead of endlessly scrolling through job boards, I developed a **custom prompt** designed to leverage AI
+                    for targeted job discovery. This prompt is carefully crafted to include my specific criteria: desired role titles,
+                    keywords, location preferences, seniority levels, and any other non-negotiables.
                 </p>
-
-                <!-- Project 1: Fraxion (Spend Management Software) -->
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl">
-                    <h3 class="text-2xl font-semibold text-neutral-50">Project: Establishing API Quality and Coverage for Spend Management Platform</h3>
-                    <p class="text-lg leading-relaxed mb-4 text-neutral-300">
-                        <span class="font-bold text-teal-400">Problem:</span> The team lacked formal QA processes and test coverage, leading to significant post-implementation bugs and decreased confidence in the platform.
-                    </p>
-                    <p class="text-lg leading-relaxed mb-4 text-neutral-300">
-                        <span class="font-bold text-teal-400">My Role & Approach:</span> I analyzed the existing API, collating documentation to understand its architecture and environment targeting. I prioritized user workflows to design and develop a comprehensive test suite in Postman, importing existing API details from Swagger. I configured authentication and environment references, managed dynamic variables for chronological requisitions, and implemented custom error logging. I also set up triggers, scheduled runs, monitoring, and alerting. I briefly assessed API performance under simulated load and integrated command-line instructions for headless test execution and targeted test runs for specific functionalities and feature work. I also performed UI testing, confirming success/failure through the API.
-                    </p>
-                    <p class="text-lg leading-relaxed mb-4 text-neutral-300">
-                        <span class="font-bold text-teal-400">Technologies:</span> Postman, Swagger, Microsoft SQL Server, Azure.
-                    </p>
-                    <p class="text-lg leading-relaxed text-neutral-300">
-                        <span class="font-bold text-teal-400">Impact:</span> My efforts established a robust and documented QA process, significantly reducing post-implementation bugs and restoring confidence in the platform. The comprehensive test coverage and proactive monitoring led to a more stable and reliable system, ensuring higher quality releases and a better user experience.
-                    </p>
-                </div>
-
-                <!-- Project 2: MRI Software (AI & Machine Learning Division) -->
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl">
-                    <h3 class="text-2xl font-semibold text-neutral-50">Project: Establishing QA for AI-driven Forms Recogniser</h3>
-                    <p class="text-lg text-neutral-300 mt-2">December 2021 - October 2023 | Cape Town, South Africa</p>
-                    <ul class="list-disc list-inside text-md leading-relaxed mt-5 pl-4 text-neutral-300">
-                        <li>Sole QA responsible for AI-driven Forms Recogniser application; established QA processes for a new team.</li>
-                        <li>Performed backend and integration tests via SQL, Azure, and Postman; tested deployment pipelines across multiple environments.</li>
-                        <li>Built automated scripts using AIQ (Selenium + JavaScript) managed through Git repositories.</li>
-                        <li>Supported DevOps tasks including infrastructure validation and CI/CD pipeline testing.</li>
-                        <li>Coordinated with globally distributed teams, reporting into US-based AI & Machine Learning leadership.</li>
-                    </ul>
-                </div>
-
-                <!-- Project 3: DOS (Online Gaming) - QA Analyst -->
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl">
-                    <h3 class="text-2xl font-semibold text-neutral-50">Project: Enhancing Testing Alignment with Real-World Usage</h3>
-                    <p class="text-lg text-neutral-300 mt-2">November 2018 - July 2019 | Cape Town, South Africa</p>
-                    <ul class="list-disc list-inside text-md leading-relaxed mt-5 pl-4 text-neutral-300">
-                        <li>Designed QA-centric dashboards (GA Data Studios) to align testing with real-world usage patterns.</li>
-                        <li>Directed Test Analysts and Automation Engineers to meet quality goals.</li>
-                        <li>Managed Agile projects leveraging Selenium, Appium, and ATATA.</li>
-                    </ul>
-                </div>
-
-                <!-- Project 4: DigiOutsource - Software QA Manager & Team Lead -->
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl">
-                    <h3 class="text-2xl font-semibold text-neutral-50">Software QA Manager & QA Team Lead | DigiOutsource</h3>
-                    <p class="text-lg text-neutral-300 mt-2">August 2012 - July 2019 | Cape Town, South Africa</p>
-                    <ul class="list-disc list-inside text-md leading-relaxed mt-5 pl-4 text-neutral-300">
-                        <li>Oversaw QA for 30+ frontend websites, managing a team of 20 QA testers.</li>
-                        <li>Introduced standardized STLC processes adopted company-wide, increasing testing reliability and efficiency.</li>
-                        <li>Mentored multiple team members into senior and leadership roles.</li>
-                        <li>Achieved 100% on-time delivery of business-critical projects with zero financial losses.</li>
-                    </ul>
-                </div>
-
-                <p class="text-lg leading-relaxed mt-10 text-neutral-300 text-center">
-                    For a more detailed breakdown of my professional experience, please refer to my full CV.
+                <p class="text-lg leading-relaxed mb-4">
+                    The magic happens when the AI processes this prompt and outputs a list of relevant job postings.
+                    Crucially, I instruct the AI to present this output in a **tabular format**, and most importantly,
+                    as a **.csv file**. This structured output is perfectly primed for the next step.
                 </p>
-                <!-- CV Download Link -->
-                <div class="flex justify-center">
-                    <a href="docs/QA Engineer CV 2025.pdf" target="_blank" rel="noopener noreferrer" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-6">
-                        Download My CV
-                    </a>
-                </div>
+                <p class="text-lg leading-relaxed">
+                    This step alone drastically cuts down the time spent searching, presenting me with a curated list
+                    of opportunities that genuinely match my profile.
+                </p>
             </section>
 
-            <!-- Section Divider SVG -->
-            <svg class="section-divider" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0,5 C25,0 75,10 100,5 L100,10 L0,10 Z" />
-            </svg>
-
-            <!-- My Demos Section -->
-            <section id="demos" class="mb-20 pt-4 fade-in-section">
-                <h2 class="text-5xl md:text-6xl font-bold text-amber-300 mb-8 border-b-2 border-neutral-600 pb-4">My Demos</h2>
-                <p class="text-lg leading-relaxed mb-10 text-neutral-300">
-                    Explore my independently developed demo projects showcasing my practical skills in UI and API automation.
+            <section class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-4 text-green-300">Phase 3: Automation in Action – Seamless CSV Import & Status Management</h2>
+                <h3 class="text-2xl font-semibold mb-3 text-gray-300">Bridging the Gap Between Discovery and Tracking</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    Here's where the workflow truly shines. Once I have the AI-generated `.csv` file, I directly **import it into my Notion job tracker database**.
+                    During the import process, I ensure that the `Status` property for all new entries is automatically set to **"Application Pending."**
                 </p>
-
-                <!-- Cypress UI & API Testing Portfolio Demo -->
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl text-center">
-                    <h3 class="text-2xl font-semibold text-neutral-50">Cypress UI & API Testing Portfolio Demo</h3>
-                    <p class="text-lg leading-relaxed mb-4 text-neutral-300 mt-2">
-                        This project demonstrates robust test case design, efficient script implementation, and effective handling of various UI and API testing scenarios using Cypress.
-                    </p>
-                    <a href="https://github.com/Alo-Holmes/cypress-portfolio-demo" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-6">
-                        View Demo Project
-                    </a>
-                </div>
-
-                <!-- Postman API Collection Demo -->
-                <div class="mb-10 p-8 bg-neutral-800 rounded-xl shadow-lg border border-neutral-700 transition duration-300 ease-in-out hover:shadow-2xl text-center">
-                    <h3 class="text-2xl font-semibold text-neutral-50">Postman API Collection Demo</h3>
-                    <p class="text-lg leading-relaxed mb-4 text-neutral-300 mt-2">
-                        This collection showcases my expertise in API testing using Postman, including various request types, authentication, and data validation.
-                    </p>
-                    <a href="https://github.com/Alo-Holmes/your-postman-collection-repo" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 mt-6">
-                        View Demo Project
-                    </a>
-                </div>
+                <p class="text-lg leading-relaxed">
+                    This step virtually eliminates the manual data entry that previously bogged me down. No more copy-pasting
+                    company names, roles, or links. No more forgetting to update the status. The entire batch of newly
+                    discovered jobs is integrated into my system with minimal effort and no duplicated work.
+                </p>
             </section>
 
-            <!-- Section Divider SVG -->
-            <svg class="section-divider" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0,5 C25,0 75,10 100,5 L100,10 L0,10 Z" />
-            </svg>
-
-            <!-- Contact Section -->
-            <section id="contact" class="pt-4 fade-in-section">
-                <h2 class="text-5xl md:text-6xl font-bold text-amber-300 mb-8 border-b-2 border-neutral-600 pb-4">Contact Me</h2>
-                <p class="text-lg leading-relaxed mb-6 text-neutral-300 text-center">
-                    Feel free to reach out to me directly via email or connect through my social profiles. I'm always keen to connect!
+            <section class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-4 text-green-300">Phase 4: The Weekly Cycle – Prioritization and Application</h2>
+                <h3 class="text-2xl font-semibold mb-3 text-gray-300">From List to Actionable Plan</h3>
+                <p class="text-lg leading-relaxed mb-4">
+                    My routine is now simple and effective: **once a week**, I run my custom prompt. I then import the
+                    resulting CSV into Notion. With all new opportunities marked "Application Pending," I can then leverage
+                    Notion's powerful sorting and filtering capabilities.
                 </p>
-
-                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center space-y-5 sm:space-y-0 sm:space-x-8">
-                    <a href="mailto:holmes.angelo@gmail.com" class="text-red-500 hover:text-red-600 transition duration-300 ease-in-out text-xl font-medium flex items-center space-x-2">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.003 5.884L10 9.882l-7.997 3.998V5.884zM22 5.884v6.003L14.003 9.882 22 5.884zM2.003 18.116L10 14.118l-7.997-3.998v6.003zM22 18.116L14.003 14.118 22 10.12v8zM12 12.001l-10-5V4h20v3l-10 5z"/></svg>
-                        <span>Email Me</span>
-                    </a>
-                    <a href="https://github.com/Alo-Holmes/Alo-Holmes" target="_blank" rel="noopener noreferrer" class="text-neutral-300 hover:text-teal-400 transition duration-300 ease-in-out text-xl font-medium flex items-center space-x-2">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.828.092-.643.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.701.115 2.503.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.098 2.65.638.702 1.03 1.594 1.03 2.69 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.21.576.684.483C21.137 20.19 24 16.436 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" /></svg>
-                        <span>GitHub Profile</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/angelo-holmes" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-600 transition duration-300 ease-in-out text-xl font-medium flex items-center space-x-2">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.362-.027-3.119-1.9-3.119-1.902 0-2.197 1.485-2.197 3.02v5.668H9.277V9.323h3.418v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.072 0-1.146.92-2.072 2.063-2.072 1.145 0 2.063.926 2.063 2.072 0 1.146-.92 2.072-2.063 2.072zm1.789 13.019H3.548V9.323h3.578v11.129zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454c.979 0 1.771-.773 1.771-1.729V1.729C24 .774 23.208 0 22.225 0z"/></svg>
-                        <span>LinkedIn Profile</span>
-                    </a>
-                    <a href="https://wa.me/27647704082" target="_blank" rel="noopener noreferrer" class="text-green-500 hover:text-green-600 transition duration-300 ease-in-out text-xl font-medium flex items-center space-x-2">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.34 4.96L2.05 22l5.03-1.31c1.47.8 3.12 1.22 4.96 1.22 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm3.87 13.91c-.11.19-.36.46-.57.54-.19.08-.43.12-.66.03-.23-.08-1.32-.49-1.53-.57-.2-.08-.34-.08-.49.08-.15.15-.57.57-.7.68-.14.11-.28.12-.52.03-.23-.08-.98-.36-1.87-1.15-.69-.6-.98-1.29-1.09-1.48-.11-.19-.01-.3-.01-.43.01-.11.08-.19.19-.28.09-.08.19-.15.28-.23.08-.08.15-.19.23-.34.08-.15.03-.28-.05-.43-.08-.15-.66-1.6-.91-2.14-.23-.52-.46-.43-.64-.43-.19 0-.43-.08-.66-.08-.23 0-.62.08-.94.43-.3.34-1.15 1.12-1.15 2.74 0 1.62 1.18 3.17 1.34 3.41.15.23 2.32 3.53 5.64 4.83 3.32 1.3 3.32.88 3.93.84.61-.04 1.1-.49 1.26-.98.15-.49.15-.9-.08-1.29z"/></svg>
-                        <span>WhatsApp Me</span>
-                    </a>
-                </div>
+                <p class="text-lg leading-relaxed">
+                    I prioritize jobs by their `Rank` property, allowing me to focus my energy on the most promising leads first.
+                    This systematic approach ensures I'm always working on the highest-value applications, and that my job tracker
+                    is always up-to-date without the constant, draining manual updates.
+                </p>
             </section>
 
-        </div>
-    </main>
+            <section class="fade-in-section">
+                <h2 class="text-3xl font-bold mb-4 text-green-300">Conclusion: Embracing Control, Ditching the Chaos</h2>
+                <p class="text-lg leading-relaxed">
+                    This workflow has been a game-changer for my QA job hunt. It transformed a historically overwhelming process
+                    into a streamlined, controlled, and even enjoyable experience. By integrating **Notion**, **custom prompts**,
+                    and **CSV imports**, I've found a way to significantly reduce manual effort, avoid duplicates, and maintain
+                    a clear, prioritized view of my job applications. If you're looking to bring order to your own job search,
+                    I highly recommend adopting a similar automated and intelligent approach.
+                </p>
+            </section>
+        </main>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="bg-teal-600 hover:bg-teal-700 text-white p-4 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-110">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-    </button>
+        <!-- Back to Top Button (hidden by default, can be activated with JS) -->
+        <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        </button>
 
-    <!-- Message Box for Copy Confirmation -->
-    <div id="message-box" class="message-box">
-        Email copied to clipboard!
-    </div>
+        <!-- Simple JavaScript to make sections fade in as they scroll into view -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const fadeSections = document.querySelectorAll('.fade-in-section');
 
-    <!-- Footer Section -->
-    <footer class="bg-neutral-900 text-neutral-400 py-8 mt-10 rounded-t-xl mx-4 mb-4">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-sm">&copy; 2025 Angelo Holmes. All rights reserved.</p>
-            <p class="text-sm mt-2">
-                <a href="mailto:holmes.angelo@gmail.com" class="hover:underline">holmes.angelo@gmail.com</a>
-            </p>
-        </div>
-    </footer>
+                const observerOptions = {
+                    root: null, // viewport
+                    rootMargin: '0px',
+                    threshold: 0.1 // Trigger when 10% of the item is visible
+                };
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // Stop observing once it's visible
+                        }
+                    });
+                }, observerOptions);
+
+                fadeSections.forEach(section => {
+                    observer.observe(section);
+                });
+
+                // Simple back to top functionality
+                const backToTopButton = document.getElementById('back-to-top');
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) { // Show button after scrolling down 300px
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
+
+                backToTopButton.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
                 });
             });
-        });
-
-        // Back to Top button functionality
-        const backToTopButton = document.getElementById('back-to-top');
-
-        window.onscroll = function() {
-            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
-
-        backToTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-
-        // Message Box for Copy Confirmation (No longer needed for email copy, but kept for general use if desired)
-        const messageBox = document.getElementById('message-box');
-        function showMessageBox(message) {
-            messageBox.textContent = message;
-            messageBox.classList.add('show');
-            setTimeout(() => {
-                messageBox.classList.remove('show');
-            }, 2000); // Hide message after 2 seconds
-        }
-
-
-        // Intersection Observer for fade-in effect
-        const fadeIns = document.querySelectorAll('.fade-in-section');
-
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Stop observing once visible
-                }
-            });
-        }, observerOptions);
-
-        fadeIns.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Testimonial Carousel and Read More Logic
-        const testimonialCards = document.querySelectorAll('.testimonial-card');
-        let currentTestimonialIndex = 0;
-
-        function showTestimonial(index) {
-            // Fade out current testimonial
-            if (testimonialCards[currentTestimonialIndex]) {
-                testimonialCards[currentTestimonialIndex].classList.remove('active');
-            }
-
-            // Update index
-            currentTestimonialIndex = index;
-
-            // Fade in new testimonial
-            if (testimonialCards[currentTestimonialIndex]) {
-                testimonialCards[currentTestimonialIndex].classList.add('active');
-                // Ensure testimonial content is collapsed by default when switching
-                const content = testimonialCards[currentTestimonialIndex].querySelector('.testimonial-content');
-                const button = testimonialCards[currentTestimonialIndex].querySelector('.read-more-btn');
-                if (content && button) {
-                    content.classList.add('collapsed');
-                    content.classList.remove('expanded');
-                    button.textContent = 'Read More';
-                }
-            }
-        }
-
-        function nextTestimonial() {
-            const nextIndex = (currentTestimonialIndex + 1) % testimonialCards.length;
-            showTestimonial(nextIndex);
-        }
-
-        function prevTestimonial() {
-            const prevIndex = (currentTestimonialIndex - 1 + testimonialCards.length) % testimonialCards.length;
-            showTestimonial(prevIndex);
-        }
-
-        // Initial display
-        if (testimonialCards.length > 0) {
-            showTestimonial(currentTestimonialIndex);
-        }
-
-        // Attach event listeners to carousel buttons
-        document.getElementById('next-testimonial').addEventListener('click', nextTestimonial);
-        document.getElementById('prev-testimonial').addEventListener('click', prevTestimonial);
-
-        // Read More/Read Less logic for each testimonial
-        document.querySelectorAll('.read-more-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const content = this.previousElementSibling; // The <p> tag with testimonial content
-                if (content.classList.contains('collapsed')) {
-                    content.classList.remove('collapsed');
-                    content.classList.add('expanded');
-                    this.textContent = 'Read Less';
-                } else {
-                    content.classList.remove('expanded');
-                    content.classList.add('collapsed');
-                    this.textContent = 'Read More';
-                }
-            });
-        });
-    </script>
-
+        </script>
+    </div>
 </body>
 </html>
