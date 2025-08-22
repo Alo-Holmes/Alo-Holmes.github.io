@@ -3,8 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <title>From Chaos to Control: My QA Job Hunt Workflow</title>
-  <link rel="stylesheet" href="/path-to-your-css.css">
-</head>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Kameron:wght@400;700&family=Sansation:wght@400;700&display=swap" rel="stylesheet"></head>
+<style>
+    body {
+        font-family: 'Sansation', sans-serif; /* Sansation for general body text */
+        background-color: #1a1a1a; /* Slightly darker base for moodier feel */
+        color: #d4d4d4; /* Neutral-300 for main text */
+        overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+    }
+    h1 {
+        font-family: 'Rock Salt', cursive; /* Special font for the name */
+    }
+    h2, h3 { /* Kameron for H2 and H3 headings */
+        font-family: 'Kameron', serif;
+    }
+    /* Custom styles for back-to-top button and message box */
+    #back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 1000;
+        display: none; /* Hidden by default */
+    }
+    .message-box {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #10b981; /* Green-500, still stands out */
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .message-box.show {
+        opacity: 1;
+    }
+
+    /* Fade-in animation for sections */
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Custom decorative divider SVG styling */
+    .section-divider {
+        width: 100%;
+        height: 50px; /* Adjust height as needed */
+        margin: 4rem auto; /* Spacing above and below */
+        display: block;
+        fill: #333333; /* Darker fill to blend with background */
+    }
+
+    /* Testimonial specific styles */
+    .testimonial-content {
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+    .testimonial-content.collapsed {
+        max-height: 4.5em; /* Approx 2 lines of text */
+    }
+    .testimonial-content.expanded {
+        max-height: 500px; /* Sufficiently large to show full content */
+    }
+    .testimonial-card {
+        display: none; /* Hidden by default for carousel */
+        opacity: 0; /* Start hidden for fade effect */
+        transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+    }
+    .testimonial-card.active {
+        display: block; /* Show active testimonial */
+        opacity: 1; /* Fade in */
+    }
+</style>
 <body>
   <h1>From Chaos to Control: My QA Job Hunt Workflow</h1>
 

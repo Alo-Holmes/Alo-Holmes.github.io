@@ -1,14 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Blog</title>
-  <link rel="stylesheet" href="/path-to-your-css.css"> <!-- adjust to match your portfolio -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angelo Holmes - Blog</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Rock Salt for name, Kameron for headings, Sansation for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Kameron:wght@400;700&family=Sansation:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles from your main site */
+        body {
+            font-family: 'Sansation', sans-serif; /* Sansation for general body text */
+            background-color: #1a1a1a; /* Slightly darker base for moodier feel */
+            color: #d4d4d4; /* Neutral-300 for main text */
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+        }
+        h1 {
+            font-family: 'Rock Salt', cursive; /* Special font for the name */
+        }
+        h2, h3 { /* Kameron for H2 and H3 headings */
+            font-family: 'Kameron', serif;
+        }
+        /* The following custom styles are included for consistency,
+           though they may not be directly used on a simple blog index page. */
+        #back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+            display: none; /* Hidden by default */
+        }
+        .message-box {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #10b981; /* Green-500, still stands out */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .message-box.show {
+            opacity: 1;
+        }
+
+        /* Fade-in animation for sections */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom decorative divider SVG styling */
+        .section-divider {
+            width: 100%;
+            height: 50px; /* Adjust height as needed */
+            margin: 4rem auto; /* Spacing above and below */
+            display: block;
+            fill: #333333; /* Darker fill to blend with background */
+        }
+
+        /* Testimonial specific styles */
+        .testimonial-content {
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .testimonial-content.collapsed {
+            max-height: 4.5em; /* Approx 2 lines of text */
+        }
+        .testimonial-content.expanded {
+            max-height: 500px; /* Sufficiently large to show full content */
+        }
+        .testimonial-card {
+            display: none; /* Hidden by default for carousel */
+            opacity: 0; /* Start hidden for fade effect */
+            transition: opacity 0.5s ease-in-out; /* Smooth fade transition */
+        }
+        .testimonial-card.active {
+            display: block; /* Show active testimonial */
+            opacity: 1; /* Fade in */
+        }
+    </style>
 </head>
-<body>
-  <h1>Blog</h1>
-<ul>
-<li><a href="2025-08-20-qa-workflow.html">From Chaos to Control: My QA Job Hunt Workflow</a></li>
-</ul>
+<body class="antialiased">
+    <div class="container mx-auto px-4 py-8 max-w-xl fade-in-section">
+        <header class="mb-8">
+            <h1 class="text-4xl lg:text-5xl font-bold text-center mb-4 text-green-400">Blog</h1>
+        </header>
+
+        <main>
+            <ul class="list-none p-0 text-center space-y-4">
+                <li class="fade-in-section">
+                    <a href="2025-08-20-qa-workflow.html" class="text-xl text-green-300 hover:text-green-500 transition-colors duration-300">
+                        From Chaos to Control: Leveraging Notion for a Seamless QA Job Hunt Workflow
+                    </a>
+                </li>
+                <!-- Add more blog post links here as you create them -->
+            </ul>
+        </main>
+
+        <footer class="mt-12 text-center fade-in-section">
+            <p class="text-gray-500 italic text-lg">
+                This blog is currently a work in progress. More insightful content is coming soon!
+            </p>
+        </footer>
+
+        <!-- Back to Top Button (hidden by default, can be activated with JS) -->
+        <button id="back-to-top" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+        </button>
+
+        <!-- Simple JavaScript to make sections fade in as they scroll into view -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const fadeSections = document.querySelectorAll('.fade-in-section');
+
+                const observerOptions = {
+                    root: null, // viewport
+                    rootMargin: '0px',
+                    threshold: 0.1 // Trigger when 10% of the item is visible
+                };
+
+                const observer = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // Stop observing once it's visible
+                        }
+                    });
+                }, observerOptions);
+
+                fadeSections.forEach(section => {
+                    observer.observe(section);
+                });
+
+                // Simple back to top functionality (not typically needed on an index, but included for consistency)
+                const backToTopButton = document.getElementById('back-to-top');
+                // Ensure the button exists before adding event listeners
+                if (backToTopButton) {
+                    window.addEventListener('scroll', () => {
+                        if (window.scrollY > 300) { // Show button after scrolling down 300px
+                            backToTopButton.style.display = 'block';
+                        } else {
+                            backToTopButton.style.display = 'none';
+                        }
+                    });
+
+                    backToTopButton.addEventListener('click', () => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                } else {
+                    console.warn("Back to Top button with ID 'back-to-top' not found.");
+                }
+            });
+        </script>
+    </div>
 </body>
 </html>
