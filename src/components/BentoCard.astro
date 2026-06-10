@@ -1,0 +1,23 @@
+---
+interface Props {
+  class?: string;
+  glowColor?: 'indigo' | 'emerald' | 'amber' | 'blue' | 'none';
+}
+
+const { class: className = '', glowColor = 'none' } = Astro.props;
+
+const glowClasses = {
+  indigo: 'hover:border-indigo-500/30 hover:shadow-indigo-500/5',
+  emerald: 'hover:border-emerald-500/30 hover:shadow-emerald-500/5',
+  amber: 'hover:border-amber-500/30 hover:shadow-amber-500/5',
+  blue: 'hover:border-blue-500/30 hover:shadow-blue-500/5',
+  none: ''
+};
+---
+
+<div class={`glass-panel glass-panel-hover rounded-2xl p-6 md:p-8 relative overflow-hidden flex flex-col justify-between group ${glowClasses[glowColor]} ${className}`}>
+  <!-- Decorative corner accent -->
+  <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-bl-full"></div>
+  
+  <slot />
+</div>

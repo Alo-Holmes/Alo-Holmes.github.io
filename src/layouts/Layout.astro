@@ -1,0 +1,35 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Angelo Holmes - QA Automation & DevOps Portfolio" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+		<!-- Google Fonts for Ultra-Modern Aesthetic -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body class="bg-[#030712] text-slate-100 font-sans antialiased min-h-screen selection:bg-indigo-500/30 selection:text-indigo-200 overflow-x-hidden relative">
+		<!-- Global Decorative Background Glows -->
+		<div class="pointer-events-none absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-indigo-500/10 blur-[120px]"></div>
+		<div class="pointer-events-none absolute top-[40%] right-[-10%] h-[600px] w-[600px] rounded-full bg-emerald-500/5 blur-[120px]"></div>
+		<div class="pointer-events-none absolute bottom-[-5%] left-[20%] h-[600px] w-[600px] rounded-full bg-indigo-500/5 blur-[120px]"></div>
+
+		<slot />
+	</body>
+</html>

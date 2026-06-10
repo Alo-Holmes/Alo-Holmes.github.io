@@ -1,0 +1,666 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BentoGrid from '../components/BentoGrid.astro';
+import BentoCard from '../components/BentoCard.astro';
+---
+
+<Layout title="Angelo Holmes | Premium QA Automation & DevOps Engineering Portfolio">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10 space-y-16">
+    
+    <!-- Top Decorative Header / Branding -->
+    <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 pb-6 border-b border-white/5">
+      <div>
+        <div class="flex items-center gap-2 mb-1.5">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span class="text-xs font-mono tracking-widest text-emerald-400 uppercase font-bold">System Status: Active & Optimizing</span>
+        </div>
+        <p class="text-sm text-slate-400 font-mono">portfolio.v1.0.0 // compiled_statically</p>
+      </div>
+      <div class="flex items-center gap-3">
+        <a 
+          href="/docs/QA%20Engineer%20CV%202025.pdf" 
+          download
+          class="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600/10 hover:bg-indigo-600/20 text-indigo-300 border border-indigo-500/20 rounded-xl text-sm font-medium transition-all duration-300"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download CV
+        </a>
+      </div>
+    </header>
+
+    <!-- Main Identity & Overview Grid -->
+    <section aria-label="Identity and Overview">
+      <BentoGrid>
+        
+        <!-- CARD 1: Identity & Brand Hero -->
+        <BentoCard class="md:col-span-2 min-h-[320px]" glowColor="emerald">
+          <div class="flex flex-col justify-between h-full">
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-xs font-mono text-emerald-400 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                  <path d="m9 12 2 2 4-4"/>
+                </svg>
+                12+ Years QA Leadership
+              </div>
+              
+              <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4">
+                Angelo Holmes
+              </h1>
+              <p class="text-lg md:text-xl font-medium bg-gradient-to-r from-slate-200 via-slate-100 to-indigo-300 bg-clip-text text-transparent">
+                Quality Assurance Engineer <span class="text-indigo-400">|</span> Automation Enthusiast
+              </p>
+            </div>
+
+            <div class="mt-8 flex flex-wrap items-center gap-6 text-sm text-slate-400 font-mono">
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Cape Town, South Africa
+              </div>
+              <div class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                </svg>
+                QA Engineer CV 2025.pdf
+              </div>
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- CARD 2: Social Connects & Fluid Navigation -->
+        <BentoCard class="md:col-span-1" glowColor="indigo">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <div>
+              <h2 class="text-xs font-mono tracking-widest text-indigo-400 uppercase font-bold mb-4">Secure Handshakes</h2>
+              <p class="text-sm text-slate-400">Direct endpoints to connect, evaluate code repositories, or coordinate real-time calls.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-2.5">
+              <!-- LinkedIn -->
+              <a 
+                href="https://www.linkedin.com/in/angelo-holmes" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center justify-between p-3 rounded-xl bg-white/3 border border-white/5 hover:border-indigo-500/30 hover:bg-indigo-500/5 group/link transition-all duration-300"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="p-1.5 bg-[#0077b5]/10 rounded-lg text-[#0077b5]">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-slate-200">LinkedIn</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-500 group-hover/link:text-indigo-400 group-hover/link:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </a>
+
+              <!-- GitHub -->
+              <a 
+                href="https://github.com/Alo-Holmes/Alo-Holmes" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center justify-between p-3 rounded-xl bg-white/3 border border-white/5 hover:border-indigo-500/30 hover:bg-indigo-500/5 group/link transition-all duration-300"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="p-1.5 bg-white/10 rounded-lg text-white">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-slate-200">GitHub</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-500 group-hover/link:text-indigo-400 group-hover/link:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </a>
+
+              <!-- WhatsApp -->
+              <a 
+                href="https://wa.me/27647704082" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex items-center justify-between p-3 rounded-xl bg-white/3 border border-white/5 hover:border-indigo-500/30 hover:bg-indigo-500/5 group/link transition-all duration-300"
+              >
+                <div class="flex items-center gap-3">
+                  <div class="p-1.5 bg-[#25d366]/10 rounded-lg text-[#25d366]">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                      <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.96 9.96 0 0 0 1.333 4.993L2 22l5.185-1.359a9.95 9.95 0 0 0 4.823 1.243h.005c5.507 0 9.99-4.478 9.99-9.984 0-2.667-1.037-5.176-2.922-7.062A9.921 9.921 0 0 0 12.012 2zm5.79 13.916c-.244.687-1.22 1.253-1.68 1.31-.4.05-.91.074-1.472-.105-.36-.115-.818-.28-1.396-.527-2.457-1.053-4.045-3.555-4.168-3.719-.12-.164-1.002-1.332-1.002-2.54 0-1.21.63-1.805.856-2.046.224-.24.49-.3.654-.3.163 0 .326.002.468.008.148.006.347-.056.543.414.2.48.68 1.66.738 1.782.06.12.098.263.02.422-.08.16-.12.26-.24.4-.12.14-.253.31-.36.417-.12.12-.246.25-.105.49.14.24.62 1.026 1.332 1.657.917.81 1.69 1.06 1.93 1.18.24.12.38.1.52-.06.14-.16.6-.7 1.144-1.35.2-.24.4-.2.65-.1.25.1 1.6.75 1.872.887.272.135.455.2.52.316.068.117.068.67-.176 1.357z"/>
+                    </svg>
+                  </div>
+                  <span class="text-sm font-medium text-slate-200">WhatsApp</span>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-500 group-hover/link:text-indigo-400 group-hover/link:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Core Anchors Navigation (Link Parity for Phase 2 Routing) -->
+            <div class="pt-4 border-t border-white/5 flex gap-3 text-xs font-mono">
+              <a href="#key-projects" class="flex-1 text-center py-2 bg-slate-800/40 hover:bg-slate-800/80 border border-white/5 hover:border-slate-500/20 rounded-lg text-slate-300 transition-all">#key-projects</a>
+              <a href="#demos" class="flex-1 text-center py-2 bg-slate-800/40 hover:bg-slate-800/80 border border-white/5 hover:border-slate-500/20 rounded-lg text-slate-300 transition-all">#demos</a>
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- CARD 3: About Me Summary -->
+        <BentoCard class="md:col-span-3" glowColor="blue">
+          <div>
+            <h2 class="text-xs font-mono tracking-widest text-blue-400 uppercase font-bold mb-6 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 21a8 8 0 0 1 13.292-6"/>
+                <circle cx="10" cy="8" r="5"/>
+                <path d="M19 16v6"/>
+                <path d="M16 19h6"/>
+              </svg>
+              About Me
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-7 space-y-5 text-slate-300 text-[15px] leading-relaxed">
+                <p class="font-medium text-white text-[16px]">
+                  Hey there! I'm Angelo Holmes, and I've been immersed in the world of Quality Assurance since 2012. Over the past 12+ years, I've had the privilege of working across diverse sectors like online gaming, PropTech, and enterprise SaaS.
+                </p>
+                <p>
+                  My journey in QA has been about more than just finding bugs; it's about building robust systems from the ground up and ensuring that the software we deliver genuinely enhances user experience. I'm passionate about automation and have a knack for diving deep into both UI and API functionalities to craft comprehensive testing strategies.
+                </p>
+                <p>
+                  For me, it's about the satisfaction of knowing something works reliably and efficiently. I've always been keen on understanding the bigger picture—from database architecture to network intricacies—because I believe a holistic view is key to true quality.
+                </p>
+              </div>
+              
+              <div class="lg:col-span-5 space-y-5 text-slate-300 text-[15px] leading-relaxed border-t lg:border-t-0 lg:border-l border-white/5 pt-6 lg:pt-0 lg:pl-8">
+                <p>
+                  I'm also a big believer in the power of Agile methodologies and have spent years leading cross-functional teams, fostering collaboration, and driving projects to successful, on-time delivery.
+                </p>
+                <p>
+                  Beyond the technical aspects, I genuinely enjoy mentoring and helping teams grow. My contributions often stretch beyond typical QA roles, touching on analytics, project management, and ensuring smooth project delivery.
+                </p>
+                <p class="text-sm font-mono text-indigo-300 bg-indigo-500/5 border border-indigo-500/10 p-3.5 rounded-xl">
+                  "I'm always learning, always adapting, and always looking for new challenges where I can bring my blend of technical expertise, leadership, and a collaborative spirit to the table. If you're looking for someone who's committed to quality and eager to contribute meaningfully, let's connect!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- CARD 4: Detailed Skills Matrix -->
+        <BentoCard class="md:col-span-3" glowColor="amber">
+          <div>
+            <h2 class="text-xs font-mono tracking-widest text-amber-400 uppercase font-bold mb-8 flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                <path d="M12 16v-4"/>
+                <path d="M12 8h.01"/>
+              </svg>
+              Key Skills & Tools Matrix
+            </h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              
+              <!-- SKILLS GROUP 1: Testing & QA -->
+              <div class="space-y-3.5">
+                <h3 class="text-sm font-semibold text-slate-200 font-mono flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  Testing & QA
+                </h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {["Manual & Automation Testing", "STLC", "SDLC", "Test Case Design", "Defect Management", "Non-Functional Testing", "Test Planning and Control", "Test Analysis"].map((skill) => (
+                    <span class="text-xs px-2.5 py-1.5 bg-emerald-500/5 hover:bg-emerald-500/10 border border-emerald-500/15 text-emerald-300 rounded-lg transition-colors font-mono">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              <!-- SKILLS GROUP 2: Automation & Scripting -->
+              <div class="space-y-3.5">
+                <h3 class="text-sm font-semibold text-slate-200 font-mono flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span>
+                  Automation & Scripting
+                </h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {["Cypress.io", "Playwright", "SpecFlow (BDD)", "Selenium WebDriver", "AIQ (Selenium + JavaScript)", "Appium"].map((skill) => (
+                    <span class="text-xs px-2.5 py-1.5 bg-indigo-500/5 hover:bg-indigo-500/10 border border-indigo-500/15 text-indigo-300 rounded-lg transition-colors font-mono">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              <!-- SKILLS GROUP 3: API & Backend Testing -->
+              <div class="space-y-3.5">
+                <h3 class="text-sm font-semibold text-slate-200 font-mono flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                  API & Backend Testing
+                </h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {["Postman", "Swagger", "Microsoft SQL Server", "Azure SQL", "MongoDB", "Insomnia"].map((skill) => (
+                    <span class="text-xs px-2.5 py-1.5 bg-blue-500/5 hover:bg-blue-500/10 border border-blue-500/15 text-blue-300 rounded-lg transition-colors font-mono">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              <!-- SKILLS GROUP 4: DevOps & CI/CD -->
+              <div class="space-y-3.5">
+                <h3 class="text-sm font-semibold text-slate-200 font-mono flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  DevOps & CI/CD
+                </h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {["Azure DevOps", "Pipeline Configuration", "Git", "App Insights"].map((skill) => (
+                    <span class="text-xs px-2.5 py-1.5 bg-amber-500/5 hover:bg-amber-500/10 border border-amber-500/15 text-amber-300 rounded-lg transition-colors font-mono">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              <!-- SKILLS GROUP 5: Languages & Frameworks -->
+              <div class="space-y-3.5 sm:mt-2">
+                <h3 class="text-sm font-semibold text-slate-200 font-mono flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-violet-500"></span>
+                  Languages & Frameworks
+                </h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {["JavaScript", "TypeScript", "C#", "HTML5", "React", "Angular"].map((skill) => (
+                    <span class="text-xs px-2.5 py-1.5 bg-violet-500/5 hover:bg-violet-500/10 border border-violet-500/15 text-violet-300 rounded-lg transition-colors font-mono">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              <!-- SKILLS GROUP 6: Tools -->
+              <div class="space-y-3.5 sm:mt-2">
+                <h3 class="text-sm font-semibold text-slate-200 font-mono flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span>
+                  Tools
+                </h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {["Jira", "Adaptavist Test Manager", "Visual Studio", "TFS", "Google Analytics", "Google Data Studios", "Kibana"].map((skill) => (
+                    <span class="text-xs px-2.5 py-1.5 bg-slate-500/10 hover:bg-slate-500/20 border border-white/10 text-slate-300 rounded-lg transition-colors font-mono">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              <!-- SKILLS GROUP 7: Methodologies -->
+              <div class="space-y-3.5 sm:mt-2">
+                <h3 class="text-sm font-semibold text-slate-200 font-mono flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                  Methodologies
+                </h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {["Agile", "Scrum", "Agile Project Management"].map((skill) => (
+                    <span class="text-xs px-2.5 py-1.5 bg-cyan-500/5 hover:bg-cyan-500/10 border border-cyan-500/15 text-cyan-300 rounded-lg transition-colors font-mono">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+              <!-- SKILLS GROUP 8: Leadership & Management -->
+              <div class="space-y-3.5 sm:mt-2">
+                <h3 class="text-sm font-semibold text-slate-200 font-mono flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-teal-500"></span>
+                  Leadership & Management
+                </h3>
+                <div class="flex flex-wrap gap-1.5">
+                  {["Leadership and Management", "Coaching and Mentoring", "Interpersonal Communication"].map((skill) => (
+                    <span class="text-xs px-2.5 py-1.5 bg-teal-500/5 hover:bg-teal-500/10 border border-teal-500/15 text-teal-300 rounded-lg transition-colors font-mono">{skill}</span>
+                  ))}
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </BentoCard>
+
+      </BentoGrid>
+    </section>
+
+    <!-- Professional Experience Grid Section -->
+    <section class="space-y-6" aria-label="Professional Experience">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-2">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">Professional Experience</h2>
+          <p class="text-slate-400 mt-1">A rigorous, metrics-driven history of QA process establishment and test suite maturity.</p>
+        </div>
+        <span class="text-xs font-mono text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-3 py-1 rounded-full w-fit">
+          12+ Years Industry Tenure
+        </span>
+      </div>
+
+      <BentoGrid>
+        
+        <!-- EXPERIENCE CARD 1: Fraxion (Spend Management Software) -->
+        <BentoCard class="md:col-span-2" glowColor="emerald">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/5 pb-4 mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-white">QA Engineer</h3>
+                  <p class="text-sm text-emerald-400 font-medium">Fraxion (Spend Management Software)</p>
+                </div>
+                <div class="text-left sm:text-right font-mono text-xs text-slate-400 space-y-0.5">
+                  <div class="text-slate-300 font-bold">April 2024 - February 2025</div>
+                  <div>Cape Town, South Africa</div>
+                </div>
+              </div>
+
+              <div class="space-y-3.5 text-slate-300 text-sm">
+                <div class="flex items-start gap-3">
+                  <span class="text-emerald-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Led API integration testing, ensuring seamless service communication within Spend Management platform.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-emerald-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Developed and executed test cases validating request/response structures, authentication, and data integrity.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-emerald-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Collaborated closely with developers and product teams to identify and resolve API-related issues.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-emerald-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Performed critical manual testing to ensure optimal user experience.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-emerald-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Improved test coverage and efficiency by refining QA documentation and processes.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-xs font-mono text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 p-2.5 rounded-lg w-fit">
+              Focus: API Quality, Request/Response validation, Security integration
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- EXPERIENCE CARD 2: MRI Software -->
+        <BentoCard class="md:col-span-1" glowColor="blue">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <div>
+              <div class="border-b border-white/5 pb-4 mb-4">
+                <h3 class="text-xl font-bold text-white">QA Engineer III</h3>
+                <p class="text-sm text-blue-400 font-medium">MRI Software (AI & Machine Learning Division)</p>
+                <div class="mt-2 font-mono text-[11px] text-slate-400 flex flex-wrap gap-x-3 gap-y-1">
+                  <span class="text-slate-300 font-semibold">Dec 2021 - Oct 2023</span>
+                  <span>|</span>
+                  <span>Cape Town, South Africa</span>
+                </div>
+              </div>
+
+              <div class="space-y-3 text-slate-300 text-xs leading-relaxed">
+                <div class="flex items-start gap-2.5">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <p>Sole QA responsible for AI-driven Forms Recogniser application; established QA processes for a new team.</p>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <p>Performed backend and integration tests via SQL, Azure, and Postman; tested deployment pipelines.</p>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <p>Built automated scripts using AIQ (Selenium + JavaScript) managed through Git repositories.</p>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <p>Supported DevOps tasks including infrastructure validation and CI/CD pipeline testing.</p>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-blue-500 font-bold">•</span>
+                  <p>Coordinated with globally distributed teams, reporting into US-based AI & Machine Learning leadership.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-[11px] font-mono text-blue-400 bg-blue-500/5 border border-blue-500/10 p-2.5 rounded-lg">
+              Primary: AI Forms, SQL/Azure backend, CI/CD, Global alignment
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- EXPERIENCE CARD 3: DOS -->
+        <BentoCard class="md:col-span-1" glowColor="indigo">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <div>
+              <div class="border-b border-white/5 pb-4 mb-4">
+                <h3 class="text-xl font-bold text-white">QA Analyst (Specialist)</h3>
+                <p class="text-sm text-indigo-400 font-medium">DOS (Online Gaming)</p>
+                <div class="mt-2 font-mono text-[11px] text-slate-400 flex flex-wrap gap-x-3 gap-y-1">
+                  <span class="text-slate-300 font-semibold">Nov 2018 - Jul 2019</span>
+                  <span>|</span>
+                  <span>Cape Town, South Africa</span>
+                </div>
+              </div>
+
+              <div class="space-y-3 text-slate-300 text-xs leading-relaxed">
+                <div class="flex items-start gap-2.5">
+                  <span class="text-indigo-500 font-bold">•</span>
+                  <p>Designed QA-centric dashboards (GA Data Studios) to align testing with real-world usage patterns.</p>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-indigo-500 font-bold">•</span>
+                  <p>Directed Test Analysts and Automation Engineers to meet quality goals.</p>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="text-indigo-500 font-bold">•</span>
+                  <p>Managed Agile projects leveraging Selenium, Appium, and ATATA.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-[11px] font-mono text-indigo-400 bg-indigo-500/5 border border-indigo-500/10 p-2.5 rounded-lg">
+              Primary: Data Dashboards, Agile management, Selenium/Appium
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- EXPERIENCE CARD 4: DigiOutsource -->
+        <BentoCard class="md:col-span-2" glowColor="amber">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/5 pb-4 mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-white">Software QA Manager & QA Team Lead</h3>
+                  <p class="text-sm text-amber-400 font-medium">DigiOutsource</p>
+                </div>
+                <div class="text-left sm:text-right font-mono text-xs text-slate-400 space-y-0.5">
+                  <div class="text-slate-300 font-bold">August 2012 - July 2019</div>
+                  <div>Cape Town, South Africa</div>
+                </div>
+              </div>
+
+              <div class="space-y-3.5 text-slate-300 text-sm">
+                <div class="flex items-start gap-3">
+                  <span class="text-amber-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Oversaw QA for 30+ frontend websites, managing a team of 20 QA testers.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-amber-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Introduced standardized STLC processes adopted company-wide, increasing testing reliability and efficiency.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-amber-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Mentored multiple team members into senior and leadership roles.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-amber-500 mt-0.5 select-none font-bold">✓</span>
+                  <p>Achieved 100% on-time delivery of business-critical projects with zero financial losses.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-xs font-mono text-amber-400 bg-amber-500/5 border border-amber-500/10 p-2.5 rounded-lg w-fit">
+              Leadership Focus: STLC Standardization, Mentoring, Large-scale delivery (30+ sites)
+            </div>
+          </div>
+        </BentoCard>
+
+      </BentoGrid>
+    </section>
+
+    <!-- Testimonials Grid Section -->
+    <section class="space-y-6" aria-label="Testimonials">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-white tracking-tight">What Peers & Leaders Say</h2>
+        <p class="text-slate-400 mt-1">Direct feedback gathered from QA specialists, software engineers, and development architects.</p>
+      </div>
+
+      <BentoGrid>
+        
+        <!-- TESTIMONIAL 1: Kurt Muller -->
+        <BentoCard class="md:col-span-1" glowColor="blue">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <blockquote class="text-sm text-slate-300 italic leading-relaxed">
+              “I’ve worked with Angelo for just under 2 years and I can say with confidence that he is one of the better leaders in QA I have worked with. He has the knowledge and experience to be able to easily slot into a functional or technical tester position, in both a doer and a leadership position. As a developer I have always been comfortable working with him on projects as it helps for an smoother SDLC process.”
+            </blockquote>
+            <div>
+              <div class="font-bold text-white text-[15px]">Kurt Muller</div>
+              <div class="text-xs text-slate-400 font-mono mt-0.5">Software Development Team Lead</div>
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- TESTIMONIAL 2: Mariné Hattingh -->
+        <BentoCard class="md:col-span-2" glowColor="indigo">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <blockquote class="text-sm text-slate-300 italic leading-relaxed">
+              “I have worked very closely with Angelo during the 2 years that he has served as both my Team Lead and Manager at DOS. Angelo has excelled in all instances, exhibiting one of the highest levels of productivity I have seen in my tenure as customer service host and functional tester... Proactive in anticipating the rising needs of a fast paced environment, he takes the initiative to go beyond the expected parameters of his job...”
+            </blockquote>
+            <div>
+              <div class="font-bold text-white text-[15px]">Mariné Hattingh</div>
+              <div class="text-xs text-slate-400 font-mono mt-0.5">QA Technical Tester</div>
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- TESTIMONIAL 3: David Mukaiwa -->
+        <BentoCard class="md:col-span-2" glowColor="emerald">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <blockquote class="text-sm text-slate-300 italic leading-relaxed">
+              “I have had the pleasure of working with Angelo Holmes for the last 7 years... He strives for continuous improvement and is a keen advocate of Automation. Angelo values a methodical approach to Quality Assurance that allows him to lend structure and stability to the software development process without compromising on the agility demanded be the modern enterprise”
+            </blockquote>
+            <div>
+              <div class="font-bold text-white text-[15px]">David Mukaiwa</div>
+              <div class="text-xs text-slate-400 font-mono mt-0.5">Associated Application Architect</div>
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- TESTIMONIAL 4: Jody September -->
+        <BentoCard class="md:col-span-1" glowColor="amber">
+          <div class="flex flex-col justify-between h-full space-y-6">
+            <blockquote class="text-sm text-slate-300 italic leading-relaxed">
+              “...In his position as Quality Assurance Team Lead, Quality Assurance Manager and Quality Assurance Analyst he demonstrated critical skills that would make him an excellent employee at your company... He has excellent written and verbal communication skills, is extremely organized, can work independently or as part of a team, and is able to effectively multi-task to ensure that all projects are completed in a timely manner...”
+            </blockquote>
+            <div>
+              <div class="font-bold text-white text-[15px]">Jody September</div>
+              <div class="text-xs text-slate-400 font-mono mt-0.5">Software Development Team Lead</div>
+            </div>
+          </div>
+        </BentoCard>
+
+        <!-- TESTIMONIAL 5: Timothy Groustra (Mentorship spotlight) -->
+        <BentoCard class="md:col-span-3" glowColor="indigo">
+          <div class="flex flex-col justify-between h-full space-y-4">
+            <blockquote class="text-sm text-slate-300 italic leading-relaxed border-l-2 border-indigo-500/20 pl-4">
+              “Angelo Holmes has been a great Team Lead and mentor to me. One year after joining the Quality Assurance department as a Functional Tester, I was assigned to Angelo's team. He helped me to develop my database and API skill sets towards becoming a Technical Tester, and helped to grow my understanding of the software development life cycle...”
+            </blockquote>
+            <div class="flex justify-between items-center flex-wrap gap-2">
+              <div>
+                <div class="font-bold text-white text-[15px]">Timothy Groustra</div>
+                <div class="text-xs text-slate-400 font-mono mt-0.5">Digital Onsite Marketer</div>
+              </div>
+              <span class="text-[11px] font-mono text-indigo-400 bg-indigo-500/5 border border-indigo-500/10 px-2.5 py-1 rounded-md">
+                Mentorship Spotlight Focus
+              </span>
+            </div>
+          </div>
+        </BentoCard>
+
+      </BentoGrid>
+    </section>
+
+    <!-- Phase 2 Preparation & Routing Anchors (Data and Link Parity) -->
+    <section class="border-t border-white/5 pt-12 space-y-6" id="hydration-anchors">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-white tracking-tight">Phase 2 Interactive Showcases</h2>
+          <p class="text-sm text-slate-400 mt-1">Pre-allocated anchor routes mapped for dynamic script execution and real-time report hydration.</p>
+        </div>
+        <span class="text-xs font-mono text-slate-400 bg-slate-800/40 border border-white/5 px-3 py-1 rounded-md">
+          Status: Ready for Automation Hydration
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Key Projects Anchor Card -->
+        <div class="glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between group hover:border-indigo-500/30 transition-all duration-300" id="key-projects">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-1 rounded-md">Fragment: #key-projects</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/>
+                <path d="M9 18c-4.51 2-5-2-7-2"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Key Projects Integration</h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Designed as a direct landing spot for comprehensive test engineering workflows. For now, explore Angelo's active open-source configurations and framework scaffolds directly on his GitHub Profile.
+            </p>
+          </div>
+          <a 
+            href="https://github.com/Alo-Holmes/Alo-Holmes" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-xs text-indigo-300 hover:text-indigo-200 transition-colors font-mono"
+          >
+            Redirecting to external GitHub profile →
+          </a>
+        </div>
+
+        <!-- Demos Anchor Card -->
+        <div class="glass-panel rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between group hover:border-emerald-500/30 transition-all duration-300" id="demos">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-md">Fragment: #demos</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 3 19 12 5 21 5 3"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Interactive Script Demos</h3>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Targeted for interactive automation execution reports, screenshot logs, and video playbacks. This section will hydrate with direct links to his test report files and live dashboard pipelines in Phase 2.
+            </p>
+          </div>
+          <a 
+            href="https://github.com/Alo-Holmes/Alo-Holmes" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-xs text-emerald-300 hover:text-emerald-200 transition-colors font-mono"
+          >
+            Redirecting to external GitHub profile →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono text-slate-500">
+      <p>© 2026 Angelo Holmes. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://github.com/Alo-Holmes/Alo-Holmes" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">GitHub</a>
+        <span>•</span>
+        <a href="https://www.linkedin.com/in/angelo-holmes" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">LinkedIn</a>
+        <span>•</span>
+        <a href="https://wa.me/27647704082" target="_blank" rel="noopener noreferrer" class="hover:text-slate-300 transition-colors">WhatsApp</a>
+      </div>
+    </footer>
+
+  </main>
+</Layout>
