@@ -7,6 +7,13 @@ export interface RepoStatus extends MonitoredRepo {
 }
 
 export async function getPipelinesTelemetry(): Promise<RepoStatus[]> {
+  // Ensure this runs only server-side during Astro build/prerender.
+  if (typeof window !== 'undefined') {
+    return Promise.resolve(
+      monitoredRepositories.map((item) => ({ ...item, status: 'unknown', updatedAt: 'Offline', runUrl: '#' }))
+    );
+  }
+
   const token = process.env.GITHUB_TOKEN; 
   
   const promises = monitoredRepositories.map(async (item) => {
@@ -25,8 +32,12 @@ export async function getPipelinesTelemetry(): Promise<RepoStatus[]> {
         }
       );
 
+      if (response.status === 403) {
+        console.warn(`[Telemetry Rate Limit] ${item.repo}: 403 Forbidden - check GITHUB_TOKEN or rate limits`);
+        return { ...item, status: 'unknown', updatedAt: 'Offline', runUrl: '#' };
+      }
+
       if (!response.ok) throw new Error(`Status ${response.status}`);
-      
       const data = await response.json();
       const latestRun = data.workflow_runs?.[0];
 
