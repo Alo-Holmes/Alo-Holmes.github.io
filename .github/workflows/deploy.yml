@@ -3,9 +3,13 @@ name: Deploy Astro Portfolio to Pages
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1'
 
 permissions:
   contents: read
+  actions: read
   pages: write
   id-token: write
 
@@ -34,6 +38,8 @@ jobs:
         run: npm ci
 
       - name: Build site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run build
 
       - name: Upload production artifacts
