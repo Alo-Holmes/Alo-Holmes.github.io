@@ -57,21 +57,21 @@ export const monitoredRepositories: MonitoredRepo[] = [
   {
     id: "playwright-e2e",
     owner: "Alo-Holmes",
-    repo: "playwright-automation", // CLI: Verify user's actual repo target if needed
+    repo: "Playwright-Demo-2025",
     label: "End-to-End Test Suite",
     framework: "playwright"
   },
   {
     id: "cypress-regression",
     owner: "Alo-Holmes",
-    repo: "cypress-tests",
+    repo: "cypress-portfolio-demo",
     label: "Regression Automation",
     framework: "cypress"
   },
   {
     id: "postman-api",
     owner: "Alo-Holmes",
-    repo: "api-testing-postman",
+    repo: "my_postman_collections",
     label: "Integration API Suite",
     framework: "postman"
   }

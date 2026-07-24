@@ -19,7 +19,7 @@ export async function getPipelinesTelemetry(): Promise<RepoStatus[]> {
   const promises = monitoredRepositories.map(async (item) => {
     try {
       const response = await fetch(
-        `https://api.github.com/repos/${item.owner}/${item.repo}/actions/runs?per_page=1`,
+        `https://api.github.com/repos/${item.owner}/${item.repo}/actions/runs?per_page=1&status=completed&branch=main`,
         {
           headers: token ? { 
             'Authorization': `Bearer ${token}`,
