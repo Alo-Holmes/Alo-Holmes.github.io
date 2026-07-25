@@ -42,8 +42,11 @@ export async function getPipelinesTelemetry(): Promise<RepoStatus[]> {
       const latestRun = data.workflow_runs?.[0];
 
       if (!latestRun) {
+        console.log(`[Telemetry Info] ${item.repo}: No completed runs found on main branch.`);
         return { ...item, status: 'unknown', updatedAt: 'No Runs', runUrl: '#' };
       }
+
+      console.log(`[Telemetry Info] ${item.repo}: Latest Run Found - ID: ${latestRun.id}, Status: ${latestRun.status}, Conclusion: ${latestRun.conclusion}, Updated: ${latestRun.updated_at}`);
 
       let cleanStatus: 'passing' | 'failing' | 'unknown' = 'unknown';
       if (latestRun.status === 'completed') {
