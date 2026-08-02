@@ -3,7 +3,7 @@
 ## Identity & Branding
 - **Name:** Angelo Holmes
 - **Title:** Quality Assurance Engineer | Automation Enthusiast
-- **CV Link:** `docs/QA Engineer CV 2025.pdf`
+- **CV Link:** `docs/Angelo_Holmes_CV_Updated.pdf`
 
 ## Social & Contact Links
 - **GitHub:** `https://github.com/Alo-Holmes/Alo-Holmes`
