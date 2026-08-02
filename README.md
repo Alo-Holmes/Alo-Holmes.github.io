@@ -4,6 +4,8 @@
 
 This site is currently verified with Node 22.12.x. On Windows, using Node 24 can trigger a post-build native assertion crash after Astro completes the build.
 
+The project scripts now run Astro with Node 22 automatically, so `npm run build` should work even if Node 24 is the default runtime on your machine.
+
 Recommended setup:
 - `nvm use` (uses `.nvmrc`)
 - or install Node 22.12.x and run `npm run build`

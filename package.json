@@ -6,10 +6,11 @@
     "node": ">=22.12.0 <25"
   },
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "check:node": "node scripts/check-node-version.mjs",
+    "dev": "npm run check:node && npx -y node@22.12.0 ./node_modules/astro/bin/astro.mjs dev",
+    "build": "npm run check:node && npx -y node@22.12.0 ./node_modules/astro/bin/astro.mjs build",
+    "preview": "npm run check:node && npx -y node@22.12.0 ./node_modules/astro/bin/astro.mjs preview",
+    "astro": "npx -y node@22.12.0 ./node_modules/astro/bin/astro.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
