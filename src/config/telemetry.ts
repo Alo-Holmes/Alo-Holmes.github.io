@@ -4,13 +4,15 @@ export interface MonitoredRepo {
   repo: string;
   label: string;
   framework: 'playwright' | 'cypress' | 'postman';
+  branch?: string;
 }
 
 export const monitoredRepositories: MonitoredRepo[] = [
   {
     id: "playwright-e2e",
     owner: "Alo-Holmes",
-    repo: "Playwright-Demo-2025",
+    repo: "playwright-automation",
+    branch: "feature/framework-foundation",
     label: "End-to-End Test Suite",
     framework: "playwright"
   },

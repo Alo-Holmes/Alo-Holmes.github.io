@@ -42,12 +42,21 @@ const statusConfig = {
     textClass: 'text-slate-400'
   }
 };
+
+const defaultFramework = {
+  acronym: '??',
+  badgeClass: 'bg-slate-500/10 border-slate-500/20 text-slate-400',
+  name: 'Unknown'
+};
+
 ---
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
   {telemetryData.map((item) => {
-    const fw = frameworkConfig[item.framework];
-    const st = statusConfig[item.status];
+    const fw = frameworkConfig[item.framework] ?? defaultFramework;
+    const st = statusConfig[item.status] ?? statusConfig.unknown;
+    const runUrl = item.runUrl && item.runUrl !== '#' ? item.runUrl : '#';
+    const canOpen = runUrl !== '#';
     
     // Map fragment IDs for backwards compatibility with navigation anchors
     const anchorId = item.id === 'playwright-e2e' ? 'key-projects' : item.id === 'cypress-regression' ? 'demos' : undefined;
