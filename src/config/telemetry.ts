@@ -11,7 +11,7 @@ export const monitoredRepositories: MonitoredRepo[] = [
   {
     id: "playwright-e2e",
     owner: "Alo-Holmes",
-    repo: "playwright-automation",
+    repo: "Playwright-Demo-2025",
     branch: "feature/framework-foundation",
     label: "End-to-End Test Suite",
     framework: "playwright"
