@@ -56,60 +56,65 @@ const defaultFramework = {
     const fw = frameworkConfig[item.framework] ?? defaultFramework;
     const st = statusConfig[item.status] ?? statusConfig.unknown;
     const runUrl = item.runUrl && item.runUrl !== '#' ? item.runUrl : '#';
+    
+    //canOpen' is declared but its value is never read.
+    
     const canOpen = runUrl !== '#';
     
     // Map fragment IDs for backwards compatibility with navigation anchors
     const anchorId = item.id === 'playwright-e2e' ? 'key-projects' : item.id === 'cypress-regression' ? 'demos' : undefined;
 
     return (
-      <BentoCard glowColor={st.glowColor} class="min-h-[260px] flex flex-col justify-between" id={anchorId}>
-        <div>
-          <!-- Header block: Framework Badge & Status indicator -->
-          <div class="flex items-center justify-between mb-5">
-            <span class={`inline-flex items-center gap-1.5 px-3 py-1 border rounded-lg text-xs font-mono font-bold ${fw.badgeClass}`}>
-              <span>{fw.acronym}</span>
-              <span class="text-[10px] opacity-60 font-sans font-normal">| {fw.name}</span>
-            </span>
-            
-            <div class="flex items-center gap-2">
-              <span class={`relative flex h-2.5 w-2.5`}>
-                {item.status !== 'unknown' && (
-                  <span class={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${st.indicatorClass}`}></span>
-                )}
-                <span class={`relative inline-flex rounded-full h-2.5 w-2.5 ${st.indicatorClass}`}></span>
+      <div id={anchorId} class="contents">
+        <BentoCard glowColor={st.glowColor} class="min-h-[260px] flex flex-col justify-between">
+          <div>
+            <!-- Header block: Framework Badge & Status indicator -->
+            <div class="flex items-center justify-between mb-5">
+              <span class={`inline-flex items-center gap-1.5 px-3 py-1 border rounded-lg text-xs font-mono font-bold ${fw.badgeClass}`}>
+                <span>{fw.acronym}</span>
+                <span class="text-[10px] opacity-60 font-sans font-normal">| {fw.name}</span>
               </span>
-              <span class={`text-xs font-mono font-medium ${st.textClass}`}>{st.text}</span>
+              
+              <div class="flex items-center gap-2">
+                <span class={`relative flex h-2.5 w-2.5`}>
+                  {item.status !== 'unknown' && (
+                    <span class={`animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 ${st.indicatorClass}`}></span>
+                  )}
+                  <span class={`relative inline-flex rounded-full h-2.5 w-2.5 ${st.indicatorClass}`}></span>
+                </span>
+                <span class={`text-xs font-mono font-medium ${st.textClass}`}>{st.text}</span>
+              </div>
+            </div>
+
+            <!-- Title & Repo Details -->
+            <h3 class="text-lg font-bold text-white mb-1 tracking-tight">{item.label}</h3>
+            <p class="text-xs text-slate-500 font-mono mb-4">{item.owner}/{item.repo}</p>
+            
+            <div class="space-y-1.5 text-xs text-slate-400 font-mono">
+              <div class="flex justify-between border-b border-white/5 pb-1.5">
+                <span class="text-slate-500">Last Executed:</span>
+                <span class="text-slate-300 font-medium">{item.updatedAt}</span>
+              </div>
             </div>
           </div>
 
-          <!-- Title & Repo Details -->
-          <h3 class="text-lg font-bold text-white mb-1 tracking-tight">{item.label}</h3>
-          <p class="text-xs text-slate-500 font-mono mb-4">{item.owner}/{item.repo}</p>
-          
-          <div class="space-y-1.5 text-xs text-slate-400 font-mono">
-            <div class="flex justify-between border-b border-white/5 pb-1.5">
-              <span class="text-slate-500">Last Executed:</span>
-              <span class="text-slate-300 font-medium">{item.updatedAt}</span>
-            </div>
+          <!-- Action / External Link -->
+          <div class="pt-4 mt-4 border-t border-white/5 flex items-center justify-between">
+            <a 
+              href={item.runUrl} 
+              target={item.runUrl !== '#' ? '_blank' : undefined}
+              rel={item.runUrl !== '#' ? 'noopener noreferrer' : undefined}
+              class="inline-flex items-center gap-1.5 text-xs text-indigo-300 hover:text-indigo-200 transition-colors font-mono group/btn"
+            >
+              <span>View CI Pipeline</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-indigo-400 group-hover/btn:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
           </div>
-        </div>
-
-        <!-- Action / External Link -->
-        <div class="pt-4 mt-4 border-t border-white/5 flex items-center justify-between">
-          <a 
-            href={item.runUrl} 
-            target={item.runUrl !== '#' ? '_blank' : undefined}
-            rel={item.runUrl !== '#' ? 'noopener noreferrer' : undefined}
-            class="inline-flex items-center gap-1.5 text-xs text-indigo-300 hover:text-indigo-200 transition-colors font-mono group/btn"
-          >
-            <span>View CI Pipeline</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-indigo-400 group-hover/btn:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-              <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-          </a>
-        </div>
-      </BentoCard>
+        </BentoCard>
+      </div>
     );
   })}
 </div>
